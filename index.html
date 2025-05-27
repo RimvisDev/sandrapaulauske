@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="lt">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title style>Formos</title>
+        <link rel="stylesheet" href="formos.css">
+        <script src="formos.js"></script>
+    </head>
+    
+    <body>
+        <div>
+            <h1>Pencijų forma</h1>
+        </div>
+
+                    <!-- ===================== NAME / SURNAME ===================== -->
+        <form action="submit.php" method="POST">  
+
+            <div class="label-container">
+
+                <div style="margin-bottom: 3px;">
+
+                    <label id="label-required">*</label>
+                    <label class="label1" for="username" id="label-container">Vardas: </label><br>
+                    <input class="input1 label-input" style="margin-top: 5px;" type="text" name="first_name" placeholder="Vardas" required>
+
+                </div>
+
+
+                <div style="margin-bottom: 0px;">
+
+                    <label id="label-required">*</label>
+                    <label class="label2" for="username" id="label-container">Pavardė: </label><br>
+                    <input class="input2 label-input" type="text" name="second_name" placeholder="Pavardė" style="margin-top: 5px;" required> 
+
+                </div>
+
+            </div>
+
+                         <!-- ===================== SEX/TITLE ===================== -->
+
+            <div class="title-container" style="margin-bottom: 10px; margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label for="title" id="titulas">Pasirinkite savo titulą:</label><br>
+
+                <select id="titulas" name="title" style="margin-left: 11px; margin-top: 5px; height: 20px; width: 90px;" required>
+
+                    <option value="" disabled selected required>Pasirinkite</option>
+                    <option value="mr">Mr</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="miss">Miss</option>
+
+                </select>
+                
+            </div>
+
+                    <!-- ===================== NUMBER OF COUNTRIES WORKED IN ===================== -->
+
+            <div class="number-container" style="margin-bottom: 5px; margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label for="numSelect">Keliose šalyse dirbote?</label><br>
+
+                <select id="numSelect" required style="margin-left: 11px; margin-top: 5px; margin-bottom: 30px; height: 20px; width: 90px;">
+
+                    <option value="" selected disabled required>Pasirinkite</option>
+                    <option value="1" class="label-input">1</option>
+                    <option value="2" class="label-input">2</option>
+                    <option value="3" class="label-input">3</option>
+                    <option value="4" class="label-input">4</option>
+
+                </select>
+
+            </div>
+
+            <div id="inputSalys" style="margin-bottom: 15px;"></div>
+
+                 <!-- ===================== NATIONAL INSURANCE ===================== -->
+
+            <div style="margin-top: -45px;">
+
+                <label id="label-required">*</label>
+                <label id="NationalInsurance" class="label3" for="positiveNumber">National Insurance Numeris (NI)</label>
+                
+                <div>
+
+                    <input class="input3 label-input" name="numeris-NI" placeholder="NI numeris" style="margin-top: 10px;" required></input>
+
+                </div>
+
+            </div>
+
+                     <!-- ===================== HOME ADDRESS ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Jūsų gyvenamasis adresas:</label>
+
+
+                <div style="margin-bottom: 5px; margin-top: 5px;">
+                    <input placeholder="Adresas" name="pirmasAdresas" class="adresas" required></input>
+                </div>
+
+
+                <div style="margin-bottom: 5px;">
+                    <input placeholder="Adresas" name="antrasAdresas" class="input-fields adresas"></input>
+                </div>
+
+
+                <div style="margin-bottom: 5px;">
+                    <input placeholder="Adresas" name="trečiasAdresas" class="input-fields adresas"></input>
+                </div>
+
+
+                <div style="margin-bottom: 10px;">
+                    <input  placeholder="Post Code" name="paštoKodas" class="post-code" required></input>
+                </div>
+
+            </div>
+
+                     <!-- ===================== PHONE NUMBER ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label for="phone">Telefono numeris:</label>
+
+                <div style="margin-top: 5px;">
+                    <input type="tel" class="input-fields label-input" name="phone" pattern="^\+?[0-9]{7,15}" placeholder="Telefono numeris" required></input>
+                </div>
+
+            </div>
+
+                        <!-- ===================== E-MAIL ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Jūsų elektroninis paštas:</label>
+
+                <div style="margin-top: 5px;">
+                    <input for="Email" name="email" type="email" placeholder="Paštas@gmail.com" class="input-fields label-input" required></input>
+                </div>
+
+            </div>
+
+                        <!-- ===================== BIRTH DATE ===================== -->
+
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>Jūsų gimimo data</label><br>
+
+                <input style="margin-top: 5px; width: 10em;" name="gimimoData" type="date" for="birthdate" class="input-fields label-input" required></input>
+
+            </div>
+
+                        <!-- ===================== BIRTH PLACE ===================== -->
+
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>Gimimo vieta:</label>
+
+                <div style="margin-top: 5px; margin-bottom: 5px;">
+                    <input placeholder="Šalis" name="gimimoŠalis" class="input-fields label-input" required>
+                    </input>
+                </div>
+
+                <div>
+                    <input placeholder="Miestas" name="gimimoMiestas" class="input-fields label-input" required></input>
+                </div>
+
+            </div>
+
+                        <!-- ===================== NATIONALITY ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Tautybė:</label>
+
+                <div style="margin-top: 2px;">
+                    <input placeholder="Tautybė" name="tautybė" class="input-fields label-input" required>
+                    </input>
+                </div>
+                
+            </div>
+
+                     <!-- ===================== PAST NAMES/SURNAMES ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label style="color: rgb(188, 0, 0);">IS IT REQUIRED?</label>
+                <label>Praeityje turėti kiti Vardai ar pavardės:</label>
+
+                <div style="margin-top: 2px;">
+
+                    <input placeholder="Vardas" name="ankstesnisVardas" class="input-fields label-input" required></input>
+                    <input placeholder="Pavardė" name="ansktesnėPavardė" class="input-fields label-input" required></input>
+
+                </div>
+
+            </div>
+
+                        <!-- ===================== FATHER NAME ===================== -->
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Tėčio vardas ir pavardė:</label>
+
+                <div style="margin-top: 2px;">
+
+                    <input placeholder="Vardas" name="tecioVardas" class="input-fields label-input" required></input>
+                    <input placeholder="Pavardė" name="tecioPavarde" class="input-fields label-input" required></input>
+
+                </div>
+                
+            </div>
+
+                        <!-- ===================== MOTHER NAMES ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Mamos vardas ir mergautinė pavardė:</label>
+
+                <div style="margin-top: 2px;">
+
+                    <input placeholder="Vardas" name="mamosVardas" class="input-fields label-input"required></input>
+                    <input placeholder="Mergautinė pavardė" name="mamosMergautinePavarde" class="input-fields label-input"required></input>
+
+                </div>
+
+            </div>
+
+                 <!-- ===================== EMPLOYMENT SECTION - RADIO BUTTONS ===================== -->
+
+            <div style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Ar šiuo metu dirbate?</label>
+
+                <div class="bubble-group">
+
+
+                    <div style="margin-top: 5px;">
+
+                        <input type="radio" id="emplayed" name="choice" value="employed" style="margin-left: 11px;" required>
+                        <label for="option1">Įdarbintas/Dirbantis</label>
+
+                    </div>
+
+            
+                    <div style="margin-top: 2px;">
+
+                        <input type="radio" id="self-employed" name="choice" value="self" style="margin-left: 11px;">
+                        <label for="option2">Savarankiškai dirbantis</label>
+
+                    </div>
+            
+                    <div style="margin-top: 2px;">
+
+                        <input type="radio" id="unemployed" name="choice" value="unemployed"style="margin-left: 11px;">
+                        <label for="option3">Nedirbantis</label>
+
+                    </div>
+                </div>
+            
+
+                <!-- ===================== SELF-EMPLOYMENT ===================== -->
+
+                <div id="work-options" style="display: none; margin-top: 10px;">
+
+
+                    <label id="label-required">*</label>
+                    <label for="income">Kokios jūsų metinės pajamos?</label><br>
+                    <input type="number" class="label-input"name="income" placeholder="Pvz. 15000" required style="margin-left: 11px;"><br><br>
+
+                    <label id="label-required">*</label>
+                    <label for="currency" >Kokia valiuta gaunate atlyginimus?</label><br>
+
+                    <input type="text" class="label-input" name="currency" placeholder="Pvz. EUR" required style="margin-left: 11px;"><br><br>
+                    
+                    <label id="label-required">*</label>
+                    <label for="endDate">Kada planuojate nebedirbti?</label><br>
+                    <input type="date" class="label-input" required name="endDate" style="margin-left: 11px; width: 10em;"><br>
+
+
+                </div>
+            
+
+                    <!-- ===================== UNEMPLOYED ===================== -->
+
+                <div id="unemployed-options" style="display: none; margin-top: 10px;">
+
+
+                    <label id="label-required">*</label>
+                    <label for="lastJobDate">Kokia buvo jūsų paskutinė darbo data?</label><br>
+                    <input type="date"class="label-input input-fields" style="width: 10em;" required name="lastJobDate"><br>
+
+
+                </div>
+
+            </div>
+
+                    <!-- ===================== MARITAL STATUS ===================== -->
+            <div style="margin-top: 10px;">
+
+
+                <label id="label-required">*</label>
+                <label>Ar kada buvote Vedes/Ištekėjusi?</label><br>
+            
+                <input type="radio" id="marriedYes" name="maritalStatus" value="yes" style="margin-left: 11px;" required>
+                <label for="marriedYes">Taip</label>  
+
+                <input type="radio" id="marriedNo" name="maritalStatus" value="no" style="margin-left: 11px;">
+                <label for="marriedNo">Ne</label>
+
+
+            </div>
+            
+                <!-- ===================== MARRIAGE DATE ===================== -->
+            <div id="marriageDateSection" class="hidden" style="margin-top: 10px;">
+
+
+                <label id="label-required">*</label>
+                <label >Santuokos pilna data</label><br>
+
+                <input type="date" class="label-input" name="marritalFullDate" id="label-input" style="margin-top: 5px; width: 10em;" required>
+
+
+            </div>
+            
+                <!-- ===================== DIVORCE? ===================== -->
+            <div id="divorceQuestionSection" class="hidden2" style="margin-top: 10px;">
+
+                <label id="label-required">*</label>
+                <label>Ar santuoka buvo nutraukta?</label><br>
+            
+                <input type="radio" id="divorceYes" style="margin-left: 11px;" name="divorceStatus" value="yes" required>
+                <label for="divorceYes">Taip</label>
+            
+                <input type="radio" id="divorceNo" name="divorceStatus" value="no">
+                <label for="divorceNo">Ne</label>
+
+            </div>
+            
+                <!-- ===================== IF DIVORCE = TRUE ===================== -->
+            <div id="extraQuestions" class="hidden2" style="margin-top: 5px;">
+
+
+                <label id="label-required">*</label>
+
+                <label>Kokia tiksli nutraukimo data?</label><br>
+                <input type="date" class="label-input" name="terminationDate" style="width: 10em;" required><br><br>
+            
+
+
+                <label id="label-required">*</label>
+                <label>Kokia priežastis?</label><br>
+            
+                <input type="radio" id="mirtis"name="reason" value="mirtis" style="margin-left: 11px;" required>
+                <label for="mirtis">Mirties atveju</label><br>
+            
+                <input type="radio" id="skirybos" name="reason" value="skirybos" style="margin-left: 11px;">
+                <label for="skirybos">Skyrybos</label><br>
+            
+                <input type="radio" id="anuliavimas" name="reason" value="anuliavimas" style="margin-left: 11px;">
+                <label for="anuliavimas">Anuliavimas</label>
+
+
+            </div>
+
+                <!-- ===================== SPOUSE INFORMATION ===================== -->
+            <div id="spouseInfoSection" class="hidden" style="margin-top: 15px;">
+
+
+                <label id="label-required">*</label>
+                <label>Jūsų sutuoktinio (esamo / buvusio) vardas ir pavardė</label><br>
+                <input type="text" name="sutuoktinioVardas" class="label-input input-fields" required placeholder="Vardas">
+                <input type="text" name="sutuoktinioPavarde" class="label-input input-fields" required placeholder="Pavardė"><br><br>
+                
+
+                <label id="label-required">*</label>
+                <label>Jūsų sutuoktinio (esamo / buvusio) praeityje turėti vardai/pavardės</label><br>
+                <input type="text" name="sutuoktinioTuretiVardai" class="input-fields label-input" required placeholder="Vardas">
+                <input type="text" name="sutuoktinioTuretosPavardes" class="input-fields label-input" required placeholder="Pavardė"><br><br>
+            
+
+                <label id="label-required">*</label>
+                <label>Jūsų sutuoktinio (esamo / buvusio) gimimo data</label><br>
+                <input type="date" name="spouseBirthDate" style="width: 10em;" required class="label-input input-fields" ><br><br>
+            
+
+                <label id="label-required">*</label>
+                <label>Jūsų sutuoktinio (esamo / buvusio) gimimo miestas</label><br>
+                <input type="text" name="spouseBirthCity" required class="input-fields label-input"><br><br>
+            
+
+                <label id="label-required">*</label>
+                <label>Jūsų sutuoktinio (esamo / buvusio) tautybė</label><br>
+                <input type="text" name="spouseNationality" required class="input-fields label-input"><br><br>
+            
+
+                <label id="label-required">*</label>
+                <label>Jūsų sutuoktinio (esamo / buvusio) NI (National Insurance) numeris</label><br>
+                <input type="text" name="spouseNatInsurance" required class="input-fields label-input">
+
+
+            </div>
+
+                <!-- ========================= ABOUT KIDS ============================ -->
+            <div style="margin-top: 15px;">
+
+
+                <label id="label-required">*</label>
+                <label>Ar turite vaikų kuriem mažiau nei 18 metų?</label><br>
+
+                <input type="radio" id="divorceYes" style="margin-left: 11px;" name="kidsBelowEighteen" value="yes" required>
+                <label for="divorceYes">Taip</label>
+            
+                <input type="radio" id="divorceNo" name="kidsBelowEighteen" value="no">
+                <label for="divorceNo">Ne</label>
+
+
+            </div>
+                <!-- ========================= PENCION DATE ============================ -->
+            <div style="margin-top: 15px;">
+
+
+                <label id="label-required">*</label>
+                <label>Data nuo kada jums priklauso pensija</label><br>
+                <input type="date" name="pensijosPradzia" class="label-input" required style="margin-top: 8px; width: 10em;">
+
+
+            </div>
+
+                <!-- ======================== BANK PROFILE =============================== -->
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>Banko sąskaitos turėtojas</label><br>
+                <input class="label-input" name="vardasAntBanko" required placeholder="Vardas">
+                <input class="label-input" name="pavardeAntBanko" required placeholder="Pavardė">
+
+
+            </div>
+                <!-- ========================== BANK NAME ====================================== -->
+
+            <div style="margin-top: 15px;">
+
+
+                <label id="label-required">*</label>
+                <label>Banko pavadinimas</label><br>
+                <input class="label-input" name="bankoPavadinimas" required>
+
+
+            </div>
+                <!-- ========================= BANK ADDRESS ================================== -->
+            <div style="margin-top: 5px;">
+
+
+                <label id="label-required">*</label>
+                <label>Jūsų banko adresas:</label>
+
+                <div style="margin-bottom: 5px; margin-top: 5px;">
+                    <input placeholder="Adresas" name="bankoAdresasPirmas" class="input-fields adresas"required></input>
+                </div>
+
+
+                <div style="margin-bottom: 5px;">
+                    <input placeholder="Adresas" name="bankoAdresasAntras" class="input-fields adresas"></input>
+                </div>
+
+
+                <div style="margin-bottom: 5px;">
+                    <input  placeholder="Adresas" name="bankoAdresasTrecias" class="input-fields adresas"></input>
+                </div>
+
+
+                <div style="margin-bottom: 5px;">
+                    <input  placeholder="Post Code" name="bankoPastoKodas" class="input-fields post-code" required></input>
+                </div>
+
+
+            </div>
+                <!-- ======================== BANK DETAILS =========================-->
+
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>Bank sort code</label><br>
+                <input class="label-input" name="bankoSortCode" required>
+
+            </div>
+
+
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>Account Number</label><br>
+                <input class="label-input" name="bankoAccountNumber" required>
+
+            </div>
+
+
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>BIC</label><br>
+                <input class="label-input" name="bankoBIC" required>
+
+            </div>
+
+
+            <div style="margin-top: 15px;">
+
+                <label id="label-required">*</label>
+                <label>IBAN</label><br>
+                <input class="label-input" name="bankoIBAN" required>
+
+            </div>
+
+                <!-- ======================= WORKED TIME IN LITHUANIA ================================= -->
+
+            <div style="margin-top: 15px;">
+
+
+                <label id="label-required">*</label>
+                <label>Data nuo kada iki kada dirbote Lietuvoje</label><br>
+
+                <label style="margin-left: 12px;">Nuo</label>
+                <input class="label-input" type="date" name="darboPradziaLT" style="width: 10em; margin-left: 5px; margin-right: 5px;" required>
+
+                <label>iki</label>
+                <input class="label-input" type="date" name="darboPabaigaLT" style="width: 10em; margin-left: 5px;" required>
+
+
+            </div>
+
+                <!-- =========================== SODRA INSURANCE NUMBER ================================== -->
+
+            <div style="margin-top: 15px;">
+
+
+                <label id="label-required">*</label>
+                <label>Socialinis sodros draudimo numeris</label><br>
+                <input class="label-input" name="socDraudimoNR" required>
+
+
+            </div>
+
+                <!-- =========================== INFO ABOUT KIDS ================================== -->
+
+            <div style="margin-top: 15px;">
+                
+
+                <label id="label-required">*</label>
+                <label for="numChildren">Kiek vaikų turite?</label><br>
+                <input type="number" name="vaikuKiekis" id="numChildren" min="0" required class="label-input" style="margin-bottom: 10px;"/>
+
+                <div id="childrenContainer"></div>
+
+
+            </div>
+
+            
+
+            <button type="submit" id="end-button" class="button-pabaiga">Pateikti</button>    
+        </form>
+    </body>
+</html>
